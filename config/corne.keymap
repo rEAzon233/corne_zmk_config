@@ -242,30 +242,30 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        letters_layer {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
             // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
-            display-name = "Base";
+            display-name = "Letters";
             bindings = <
 &kp ESC             &kp Q  &kp W  &kp E           &kp R         &kp T          &kp Y        &kp U          &kp I      &kp O    &kp P     &kp LEFT_BRACKET
 &mt LEFT_SHIFT TAB  &kp A  &kp S  &kp D           &kp F         &kp G          &kp H        &kp J          &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LCTRL           &kp Z  &kp X  &kp C           &kp V         &kp B          &kp N        &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_BRACKET
-                                  &sk LEFT_SHIFT  &kp LEFT_GUI  &lt 1 SPACE    &lt 2 ENTER  &kp BACKSPACE  &kp RALT
+                                  &sk LEFT_SHIFT  &kp LEFT_GUI  &lt 1 SPACE    &lt 2 ENTER  &kp BACKSPACE  &kp LALT
             >;
         };
 
-        lower_layer {
+        numbers_layer {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
             // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
             // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
-            display-name = "Lower";
+            display-name = "Numbers";
             bindings = <
 &kp F1          &kp F2             &kp F3           &kp F4           &kp F5         &kp F6       &kp F7        &kp F8        &kp F9            &kp F10       &kp F11       &kp F12
 &kp LEFT_SHIFT  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp PLUS         &kp MINUS      &kp SLASH    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3      &kp NUMBER_4  &kp N5        &kp C_MUTE
@@ -274,14 +274,14 @@
             >;
         };
 
-        raise_layer {
+        arrows_layer {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
             // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
-            display-name = "Raise";
+            display-name = "Arrows";
             bindings = <
 &bt BT_CLR          &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0      &kp CARET  &kp AMPS  &kp KP_MULTIPLY  &kp LPAR   &kp RPAR  &kp BSPC
 &nvim_down          &nvim_up      &none         &none         &none         &msc SCRL_UP      &kp LEFT   &kp DOWN  &kp UP           &kp RIGHT  &kp BSLH  &kp GRAVE
