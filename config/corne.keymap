@@ -237,6 +237,19 @@
 
             label = "NVIM_SPLIT_WINDOW";
         };
+
+        past_after_delete: past_after_delete {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp DOUBLE_QUOTES>,
+                <&macro_wait_time 50>,
+                <&kp KP_NUMBER_0>,
+                <&macro_wait_time 100>,
+                <&kp P>;
+
+            label = "PAST_AFTER_DELETE";
+        };
     };
 
     keymap {
@@ -283,10 +296,10 @@
 
             display-name = "Arrows";
             bindings = <
-&bt BT_CLR          &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0      &kp CARET  &kp AMPS  &kp KP_MULTIPLY  &kp LPAR   &kp RPAR  &kp BSPC
-&nvim_down          &nvim_up      &none         &none         &none         &msc SCRL_UP      &kp LEFT   &kp DOWN  &kp UP           &kp RIGHT  &kp BSLH  &kp GRAVE
-&nvim_split_window  &none         &nvim_left    &nvim_right   &none         &msc SCRL_DOWN    &kp UNDER  &kp PLUS  &kp LBRC         &kp RBRC   &kp PIPE  &kp TILDE
-                                                &kp CAPS      &kp LEFT_GUI  &kp SPACE         &trans     &trans    &trans
+&bt BT_CLR          &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1        &bt BT_SEL 0      &kp CARET  &kp AMPS  &kp KP_MULTIPLY  &kp LPAR   &kp RPAR  &kp BSPC
+&nvim_down          &nvim_up      &none         &none         &none               &msc SCRL_UP      &kp LEFT   &kp DOWN  &kp UP           &kp RIGHT  &kp BSLH  &kp GRAVE
+&nvim_split_window  &none         &nvim_left    &nvim_right   &past_after_delete  &msc SCRL_DOWN    &kp UNDER  &kp PLUS  &kp LBRC         &kp RBRC   &kp PIPE  &kp TILDE
+                                                &kp CAPS      &kp LEFT_GUI        &kp SPACE         &trans     &trans    &trans
             >;
         };
 
